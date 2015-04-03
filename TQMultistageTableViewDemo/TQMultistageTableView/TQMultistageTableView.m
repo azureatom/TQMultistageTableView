@@ -54,6 +54,8 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
         _atomOrigin = CGPointMake(0, 0);
         
         _tableView = [[UITableView alloc] initWithFrame:frame];
+        _tableView.bounces = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate         = self;
         _tableView.dataSource       = self;
         _tableView.backgroundColor  = [UIColor clearColor];
@@ -246,11 +248,11 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
     [self.tableView beginUpdates];
     if ([insertIndexPaths count] > 0)
     {
-        [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationTop];
+        [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationFade];
     }
     if ([deleteIndexPaths count] > 0)
     {
-        [self.tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
+        [self.tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationFade];
     }
     [self.tableView endUpdates];
 }
