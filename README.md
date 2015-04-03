@@ -8,12 +8,15 @@ TQMultistageTableView
 ## Demo
 
 真实项目中通过这个控件实现的功能：
+
 ![preview](https://github.com/azureatom/TQMultistageTableView/blob/master/READMEIMAGE/TQTableView.gif)
 
 该项目中的Demo：
+
 ![preview](https://github.com/azureatom/TQMultistageTableView/blob/master/READMEIMAGE/TQTableView2.gif)
 
 选择学校、年级的二级列表：
+
 ![preview](https://github.com/azureatom/TQMultistageTableView/blob/master/READMEIMAGE/SchoolGradeView.png)
 
 ## Usage
