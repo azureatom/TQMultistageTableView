@@ -26,6 +26,7 @@
 #import "TQAppDelegate.h"
 
 #import "TQViewController.h"
+#import "GradeViewController.h"
 
 @implementation TQAppDelegate
 
@@ -33,8 +34,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    TQViewController *viewController = [[TQViewController alloc] init];
-    viewController.title = @"TQMultistageTableView";
+    GradeViewController *viewController = [[GradeViewController alloc] init];
+//    TQViewController *viewController = [[TQViewController alloc] init];
+//    viewController.title = @"TQMultistageTableView";
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
     self.window.rootViewController = navigationController;

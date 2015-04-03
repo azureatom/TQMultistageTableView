@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500DA11A1ACE81E3000EB6C5 /* GradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA1191ACE81E3000EB6C5 /* GradeViewController.m */; };
 		58D03043183B5BF9006A5D1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D03042183B5BF9006A5D1D /* Images.xcassets */; };
 		58F8D32517D5CF090037C5AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F8D32417D5CF090037C5AE /* UIKit.framework */; };
 		58F8D32717D5CF090037C5AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F8D32617D5CF090037C5AE /* Foundation.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500DA1181ACE81E3000EB6C5 /* GradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeViewController.h; sourceTree = "<group>"; };
+		500DA1191ACE81E3000EB6C5 /* GradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeViewController.m; sourceTree = "<group>"; };
 		58D03042183B5BF9006A5D1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58F8D32117D5CF090037C5AE /* TQMultistageTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TQMultistageTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F8D32417D5CF090037C5AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +88,8 @@
 				58F8D33417D5CF090037C5AE /* TQAppDelegate.m */,
 				58F8D33C17D5CF090037C5AE /* TQViewController.h */,
 				58F8D33D17D5CF090037C5AE /* TQViewController.m */,
+				500DA1181ACE81E3000EB6C5 /* GradeViewController.h */,
+				500DA1191ACE81E3000EB6C5 /* GradeViewController.m */,
 				58D03042183B5BF9006A5D1D /* Images.xcassets */,
 				58F8D32B17D5CF090037C5AE /* Supporting Files */,
 			);
@@ -179,6 +184,7 @@
 				58F8D33117D5CF090037C5AE /* main.m in Sources */,
 				58F8D33517D5CF090037C5AE /* TQAppDelegate.m in Sources */,
 				58F8D33E17D5CF090037C5AE /* TQViewController.m in Sources */,
+				500DA11A1ACE81E3000EB6C5 /* GradeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
