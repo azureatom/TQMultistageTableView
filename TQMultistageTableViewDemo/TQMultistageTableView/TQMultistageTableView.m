@@ -103,6 +103,11 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
     [self.tableView reloadData];
 }
 
+-(void)updateFrame:(CGRect)frame{
+    self.frame = frame;
+    _tableView.frame = frame;
+}
+
 #pragma mark - Private Methods
 
 /**
@@ -241,11 +246,11 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
     [self.tableView beginUpdates];
     if ([insertIndexPaths count] > 0)
     {
-        [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationLeft];
+        [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationTop];
     }
     if ([deleteIndexPaths count] > 0)
     {
-        [self.tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
     }
     [self.tableView endUpdates];
 }

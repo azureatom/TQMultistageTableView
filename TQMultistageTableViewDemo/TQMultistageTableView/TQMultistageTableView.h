@@ -92,6 +92,7 @@
  */
 - (void)reloadData;
 
+-(void)updateFrame:(CGRect)frame;
 @end
 
 /**
