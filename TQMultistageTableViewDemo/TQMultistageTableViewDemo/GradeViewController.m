@@ -44,6 +44,7 @@ static const int kGradeViewRowHeight = 33;
     [super viewDidLoad];
     
     self.multistageTableView = [[TQMultistageTableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    self.multistageTableView.tableView.bounces = NO;
     self.multistageTableView.dataSource = self;
     self.multistageTableView.delegate = self;
     self.multistageTableView.backgroundColor = [UIColor whiteColor];
@@ -76,8 +77,11 @@ static const int kGradeViewRowHeight = 33;
 
 -(void)viewWillLayoutSubviews{
     //因为有navigation bar，所以self.view.frame.size.height会重新调整。
-    if (self.multistageTableView.frame.size.width < 1) {//之前未设置tableView.frame.size
-        [self.multistageTableView updateFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    CGRect frame = self.multistageTableView.frame;
+    if (frame.size.width < 1) {//之前未设置tableView.frame.size
+        frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        self.multistageTableView.frame = frame;
+        self.multistageTableView.tableView.frame = frame;
     }
 }
 

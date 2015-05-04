@@ -54,8 +54,6 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
         _atomOrigin = CGPointMake(0, 0);
         
         _tableView = [[UITableView alloc] initWithFrame:frame];
-        _tableView.bounces = NO;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate         = self;
         _tableView.dataSource       = self;
         _tableView.backgroundColor  = [UIColor clearColor];
@@ -103,11 +101,6 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
 {
     _openedIndexPath = [NSIndexPath indexPathForRow:-1 inSection:-1];
     [self.tableView reloadData];
-}
-
--(void)updateFrame:(CGRect)frame{
-    self.frame = frame;
-    _tableView.frame = frame;
 }
 
 #pragma mark - Private Methods
@@ -396,6 +389,13 @@ static const CGFloat kDefultHeightForAtom   = 44.0f;
     NSInteger section = gesture.view.tag;
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:-1 inSection:section];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mTableView: shouldHandleTouchHeaderInSection:)])
+    {
+        if ([self.delegate mTableView:self shouldHandleTouchHeaderInSection:indexPath.section]) {
+            return;
+        }
+    }
     
     [self openOrCloseCellWithTouchType:TQHeaderLineTouch forIndexPath:indexPath];
 }

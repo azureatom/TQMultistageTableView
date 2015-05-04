@@ -92,7 +92,6 @@
  */
 - (void)reloadData;
 
--(void)updateFrame:(CGRect)frame;
 @end
 
 /**
@@ -133,6 +132,10 @@
 - (void)mTableView:(TQMultistageTableView *)mTableView willCloseRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)mTableView:(TQMultistageTableView *)mTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
+/*
+ * return YES when delegate handles the touch event in header, or NO if it doesn't handle it and TQMultistageTableView will do default operation, that is open sub cells.
+ */
+- (BOOL)mTableView:(TQMultistageTableView *)mTableView shouldHandleTouchHeaderInSection:(NSInteger)section;
 @end
 
 
